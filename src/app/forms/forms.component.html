@@ -1,0 +1,28 @@
+
+<form action="" [formGroup]="myForm" (ngSubmit)="handleSubmit()">
+
+    <div>
+        <label for="name">Name : </label>
+        <input type="text" id="name" formControlName="name">
+        
+        <p *ngIf="myForm.get('name')?.hasError('required')">
+            Name Is required..
+        </p>
+        <p *ngIf="myForm.get('name')?.hasError('minlength')">
+            Minimum 10 Character needed..
+        </p>
+        
+    </div>
+    <div>
+        <label for="email">Email : </label>
+        <input type="email" id="email" formControlName="email">
+
+        <p *ngIf="myForm.get('email')?.hasError('required')">
+            Email is required..
+        </p>
+        <p *ngIf="myForm.get('email')?.hasError('email')">
+            Please provide a valid email..
+        </p>
+    </div>
+    <button type="submit" [disabled]="myForm.invalid" >Submit</button>
+</form>

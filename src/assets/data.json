@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Buddhadeb",
+        "city": "Bishnupur",
+        "age": 23
+    },
+    {
+        "name":"Kunal",
+        "city":"Asansol",
+        "age":23
+    },
+    {
+        "name":"Mangal",
+        "city":"Bardawan",
+        "age":25
+    }
+]
